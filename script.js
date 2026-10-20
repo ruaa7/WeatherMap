@@ -184,5 +184,12 @@ function loadFavorites() {
     return [];
   }
 }
+function saveFavorites(list) {
+  try {
+    localStorage.setItem(FAV_KEY, JSON.stringify(list));
+  } catch {
+    showAlert('Could not save favorites in this browser.');
+  }
+}
 
 
