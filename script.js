@@ -206,5 +206,12 @@ function removeFavorite(name) {
   saveFavorites(loadFavorites().filter((n) => n !== name));
   renderFavorites();
 }
+function renderFavorites() {
+  const list = loadFavorites();
+  favList.replaceChildren();
+  if (list.length === 0) {
+    favList.append(makeEl('span', 'favorites-empty', 'No favorites yet.'));
+    return;
+  }
 
 
