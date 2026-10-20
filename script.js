@@ -213,5 +213,13 @@ function renderFavorites() {
     favList.append(makeEl('span', 'favorites-empty', 'No favorites yet.'));
     return;
   }
+  list.forEach((name) => {
+    const chip = makeEl('div', 'fav-chip');
+    const go = makeEl('button', '', name);
+    go.type = 'button';
+    go.addEventListener('click', () => {
+      input.value = name;
+      searchWeather(name);
+    });
 
 
