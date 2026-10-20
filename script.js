@@ -191,5 +191,16 @@ function saveFavorites(list) {
     showAlert('Could not save favorites in this browser.');
   }
 }
+function addFavorite(name) {
+  const list = loadFavorites();
+  if (list.some((n) => n.toLowerCase() === name.toLowerCase())) {
+    showAlert(`${name} is already in your favorites.`, 'success');
+    return;
+  }
+  list.push(name);
+  saveFavorites(list);
+  renderFavorites();
+  showAlert(`${name} added to favorites.`, 'success');
+}
 
 
