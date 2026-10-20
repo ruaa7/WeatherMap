@@ -202,5 +202,9 @@ function addFavorite(name) {
   renderFavorites();
   showAlert(`${name} added to favorites.`, 'success');
 }
+function removeFavorite(name) {
+  saveFavorites(loadFavorites().filter((n) => n !== name));
+  renderFavorites();
+}
 
 
