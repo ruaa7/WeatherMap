@@ -221,5 +221,13 @@ function renderFavorites() {
       input.value = name;
       searchWeather(name);
     });
+    const del = makeEl('button', 'fav-remove', '\u00D7');
+    del.type = 'button';
+    del.setAttribute('aria-label', `Remove ${name}`);
+    del.addEventListener('click', () => removeFavorite(name));
+    chip.append(go, del);
+    favList.append(chip);
+  });
+}
 
 
