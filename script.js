@@ -175,4 +175,14 @@ searchForm.addEventListener('submit', (event) => {
 });
 mapShareBtn.addEventListener('click', shareMap);
 
+// Favorite cities: save, remove and show quick-access buttons 
+function loadFavorites() {
+  try {
+    const data = JSON.parse(localStorage.getItem(FAV_KEY));
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
 
