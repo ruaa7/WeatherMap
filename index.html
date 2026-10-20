@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherMap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="page-title">WeatherMap</h1>
+    <p class="subtitle">Search any place and Explore the weather from anywhere in the world</p>
+  </header>
+
+  <main class="container">
+    <form id="search-form" class="search-form" autocomplete="off">
+      <label for="location-input" class="visually-hidden">Location</label>
+      <input type="text" id="location-input" class="search-input" placeholder="Enter a city, address or place" required>
+      <button type="submit" id="submit-btn" class="search-btn">Get Weather</button>
+    </form>
+
+    <div id="alert-area" class="alert-area" aria-live="polite"></div>
+
+    <section class="favorites" aria-label="Favorite cities">
+      <h2 class="favorites-title">Favorites</h2>
+      <div id="favorites-list" class="favorites-list"></div>
+    </section>
+
+    <div class="map-wrapper">
+      <div id="loader" class="loader-overlay" hidden>
+        <div class="spinner" role="status" aria-label="Loading"></div>
+      </div>
+      <div id="map"></div>
+    </div>
+
+    <div class="share-bar">
+        <button type="button" id="share-map-btn" class="search-btn">Share Map</button>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
