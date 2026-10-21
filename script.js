@@ -230,4 +230,6 @@ function renderFavorites() {
   });
 }
 
+renderFavorites();
+
 
