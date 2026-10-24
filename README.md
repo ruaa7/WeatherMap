@@ -14,10 +14,12 @@ A single-page application that takes a location (city, address or place), finds 
 ## How to run
 1. Get a free API key from [openweathermap.org](https://openweathermap.org/) (My API keys).
 2. Open `script.js` and put your key in `WEATHER_API_KEY`:
-   ```js
    const WEATHER_API_KEY = 'your_key';
-   ```
 3. Open the project with a local server and type a location then click Get Weather.
+
+## Extra features
+1. Share button in the weather popup (Web Share API or copy to clipboard) and Share Map button (shares a link to the current   map view).
+2. Favorite cities saved in localStorage.
 
 ## Student Name
 Ruaa Yousif Mohammed Alamin
